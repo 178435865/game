@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BFF3D5EC-3AA8-4075-B541-0DA1FA9D701C}</ProjectGuid>
+    <RootNamespace>Fengshengbang</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>game</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '10.0'">v100</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0'">v110</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v110_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '10.0'">v100</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0'">v110</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v110_xp</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration).win32\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration).win32\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\cocos2dx;$(ProjectDir)..\..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\..\cocos2dx\platform\third_party\win32\OGLES;..\Classes;$(ProjectDir)..\..\..\..\extensions;$(ProjectDir)..\..\..\..\cocos2dx\platform\third_party\win32\pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;libcocos2d.lib;libExtensions.lib;pthreadVCE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\cocos2dx;$(ProjectDir)..\..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\..\cocos2dx\platform\third_party\win32\OGLES;..\Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;libcocos2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\cocos2dx\proj.win32\cocos2d.vcxproj">
+      <Project>{98a51ba8-fc3a-415b-ac8f-8c7bd464e93e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\CocosDenshion\proj.win32\CocosDenshion.vcxproj">
+      <Project>{f8edd7fa-9a51-4e80-baeb-860825d2eac6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\extensions\proj.win32\libExtensions.vcxproj">
+      <Project>{21b2c324-891f-48ea-ad1a-5ae13de12e28}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\framework\GameScene.cpp" />
+    <ClCompile Include="..\Classes\framework\SceneManager.cpp" />
+    <ClCompile Include="..\Classes\game\application\ApplicationCommand.cpp" />
+    <ClCompile Include="..\Classes\game\login\LoginCommand.cpp" />
+    <ClCompile Include="..\Classes\game\login\LoginFacade.cpp" />
+    <ClCompile Include="..\Classes\game\login\LoginMediator.cpp" />
+    <ClCompile Include="..\Classes\game\login\LoginProxy.cpp" />
+    <ClCompile Include="..\Classes\game\test\testScene.cpp" />
+    <ClCompile Include="..\Classes\game\test\testScene1.cpp" />
+    <ClCompile Include="..\Classes\game\test\UIScene.cpp" />
+    <ClCompile Include="..\Classes\lock\Lock.cpp" />
+    <ClCompile Include="..\Classes\mvc\core\Controller.cpp" />
+    <ClCompile Include="..\Classes\mvc\core\Model.cpp" />
+    <ClCompile Include="..\Classes\mvc\core\View.cpp" />
+    <ClCompile Include="..\Classes\mvc\patterns\Facade.cpp" />
+    <ClCompile Include="..\Classes\mvc\patterns\Mediator.cpp" />
+    <ClCompile Include="..\Classes\mvc\patterns\Notifier.cpp" />
+    <ClCompile Include="..\Classes\network\MessageQueue.cpp" />
+    <ClCompile Include="..\Classes\network\NetManager.cpp" />
+    <ClCompile Include="..\Classes\network\odsocket.cpp" />
+    <ClCompile Include="..\Classes\network\Runnable.cpp" />
+    <ClCompile Include="..\Classes\network\Thread.cpp" />
+    <ClCompile Include="..\Classes\util\StringHelper.cpp" />
+    <ClCompile Include="..\Classes\util\UtilCocostudio.cpp" />
+    <ClCompile Include="..\Classes\util\UtilView.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\AppMacros.h" />
+    <ClInclude Include="..\Classes\framework\BaseMacros.h" />
+    <ClInclude Include="..\Classes\framework\GameScene.h" />
+    <ClInclude Include="..\Classes\framework\SceneManager.h" />
+    <ClInclude Include="..\Classes\gameStd.h" />
+    <ClInclude Include="..\Classes\game\application\ApplicationCommand.h" />
+    <ClInclude Include="..\Classes\game\login\LoginCommand.h" />
+    <ClInclude Include="..\Classes\game\login\LoginFacade.h" />
+    <ClInclude Include="..\Classes\game\login\LoginMediator.h" />
+    <ClInclude Include="..\Classes\game\login\LoginProxy.h" />
+    <ClInclude Include="..\Classes\game\login\LoginVO.h" />
+    <ClInclude Include="..\Classes\game\test\testScene.h" />
+    <ClInclude Include="..\Classes\game\test\testScene1.h" />
+    <ClInclude Include="..\Classes\game\test\UIScene.h" />
+    <ClInclude Include="..\Classes\lock\ILock.h" />
+    <ClInclude Include="..\Classes\lock\Lock.h" />
+    <ClInclude Include="..\Classes\mvc\core\Controller.h" />
+    <ClInclude Include="..\Classes\mvc\core\Model.h" />
+    <ClInclude Include="..\Classes\mvc\core\View.h" />
+    <ClInclude Include="..\Classes\mvc\interface\ICommand.h" />
+    <ClInclude Include="..\Classes\mvc\interface\IController.h" />
+    <ClInclude Include="..\Classes\mvc\interface\IFacade.h" />
+    <ClInclude Include="..\Classes\mvc\interface\IMediator.h" />
+    <ClInclude Include="..\Classes\mvc\interface\IModel.h" />
+    <ClInclude Include="..\Classes\mvc\interface\INotifier.h" />
+    <ClInclude Include="..\Classes\mvc\interface\IProxy.h" />
+    <ClInclude Include="..\Classes\mvc\interface\IView.h" />
+    <ClInclude Include="..\Classes\mvc\patterns\Facade.h" />
+    <ClInclude Include="..\Classes\mvc\patterns\Mediator.h" />
+    <ClInclude Include="..\Classes\mvc\patterns\Notification.h" />
+    <ClInclude Include="..\Classes\mvc\patterns\Notifier.h" />
+    <ClInclude Include="..\Classes\mvc\patterns\Proxy.h" />
+    <ClInclude Include="..\Classes\mvc\patterns\SingleCommand.h" />
+    <ClInclude Include="..\Classes\network\Message.h" />
+    <ClInclude Include="..\Classes\network\MessageQueue.h" />
+    <ClInclude Include="..\Classes\network\NetManager.h" />
+    <ClInclude Include="..\Classes\network\odsocket.h" />
+    <ClInclude Include="..\Classes\network\Runnable.h" />
+    <ClInclude Include="..\Classes\network\Thread.h" />
+    <ClInclude Include="..\Classes\util\StringHelper.h" />
+    <ClInclude Include="..\Classes\util\Util.h" />
+    <ClInclude Include="..\Classes\util\UtilCocostudio.h" />
+    <ClInclude Include="..\Classes\util\UtilView.h" />
+    <ClInclude Include="main.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

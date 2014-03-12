@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="classes">
+      <UniqueIdentifier>{4f7d701d-d251-44b9-8b14-1904ea24ba4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\mvc">
+      <UniqueIdentifier>{3bfad020-75c0-470c-a9e0-91780d4cfd6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\mvc\interface">
+      <UniqueIdentifier>{0e7fcc19-54fe-4944-b38a-297a1ec684ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\mvc\core">
+      <UniqueIdentifier>{5e7ebf9a-4363-4017-9a23-3112f644b64d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\mvc\patterns">
+      <UniqueIdentifier>{a9004597-4972-4585-b989-6365913197dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game">
+      <UniqueIdentifier>{4ac9791d-8d9a-4578-8ec8-9797009321f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\login">
+      <UniqueIdentifier>{b2339d2b-b8e0-4a19-b81a-320cf01064d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\util">
+      <UniqueIdentifier>{48f8494a-f652-4dec-9e59-128241fcfac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\application">
+      <UniqueIdentifier>{76872324-601a-4212-b566-5fe15f96752b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\framework">
+      <UniqueIdentifier>{339a11eb-3e8b-45d3-8eac-4b72cd0ceb0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\test">
+      <UniqueIdentifier>{b5607719-a4b1-46e7-bd53-a1867abe15b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\network">
+      <UniqueIdentifier>{f9b74877-70a5-4f9a-9a83-d4ea216e3133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\lock">
+      <UniqueIdentifier>{3dcefe99-61f3-408d-842b-d883861b4d78}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\Classes\mvc\core\View.cpp">
+      <Filter>classes\mvc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mvc\core\Controller.cpp">
+      <Filter>classes\mvc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mvc\patterns\Facade.cpp">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mvc\core\Model.cpp">
+      <Filter>classes\mvc\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mvc\patterns\Mediator.cpp">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mvc\patterns\Notifier.cpp">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\login\LoginMediator.cpp">
+      <Filter>classes\game\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\login\LoginFacade.cpp">
+      <Filter>classes\game\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\login\LoginCommand.cpp">
+      <Filter>classes\game\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\util\StringHelper.cpp">
+      <Filter>classes\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\login\LoginProxy.cpp">
+      <Filter>classes\game\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\util\UtilView.cpp">
+      <Filter>classes\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\util\UtilCocostudio.cpp">
+      <Filter>classes\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\application\ApplicationCommand.cpp">
+      <Filter>classes\game\application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\framework\SceneManager.cpp">
+      <Filter>classes\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\framework\GameScene.cpp">
+      <Filter>classes\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\test\testScene.cpp">
+      <Filter>classes\game\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\test\testScene1.cpp">
+      <Filter>classes\game\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\test\UIScene.cpp">
+      <Filter>classes\game\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\network\NetManager.cpp">
+      <Filter>classes\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\network\odsocket.cpp">
+      <Filter>classes\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\network\Thread.cpp">
+      <Filter>classes\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\lock\Lock.cpp">
+      <Filter>classes\lock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\network\MessageQueue.cpp">
+      <Filter>classes\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\network\Runnable.cpp">
+      <Filter>classes\network</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\AppMacros.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="..\Classes\mvc\interface\ICommand.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\interface\IController.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\interface\IFacade.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\interface\IMediator.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\interface\INotifier.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\interface\IView.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\core\View.h">
+      <Filter>classes\mvc\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\core\Controller.h">
+      <Filter>classes\mvc\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\patterns\Facade.h">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\patterns\Notification.h">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\patterns\Mediator.h">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\interface\IModel.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\interface\IProxy.h">
+      <Filter>classes\mvc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\core\Model.h">
+      <Filter>classes\mvc\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\patterns\Notifier.h">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\patterns\SingleCommand.h">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\login\LoginMediator.h">
+      <Filter>classes\game\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\login\LoginProxy.h">
+      <Filter>classes\game\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\login\LoginCommand.h">
+      <Filter>classes\game\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\login\LoginFacade.h">
+      <Filter>classes\game\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\util\StringHelper.h">
+      <Filter>classes\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\util\Util.h">
+      <Filter>classes\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\login\LoginVO.h">
+      <Filter>classes\game\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mvc\patterns\Proxy.h">
+      <Filter>classes\mvc\patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\gameStd.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\util\UtilView.h">
+      <Filter>classes\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\util\UtilCocostudio.h">
+      <Filter>classes\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\application\ApplicationCommand.h">
+      <Filter>classes\game\application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\SceneManager.h">
+      <Filter>classes\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\GameScene.h">
+      <Filter>classes\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\BaseMacros.h">
+      <Filter>classes\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\test\testScene.h">
+      <Filter>classes\game\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\test\testScene1.h">
+      <Filter>classes\game\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\test\UIScene.h">
+      <Filter>classes\game\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\network\NetManager.h">
+      <Filter>classes\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\network\odsocket.h">
+      <Filter>classes\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\network\Runnable.h">
+      <Filter>classes\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\network\Thread.h">
+      <Filter>classes\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\lock\ILock.h">
+      <Filter>classes\lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\lock\Lock.h">
+      <Filter>classes\lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\network\Message.h">
+      <Filter>classes\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\network\MessageQueue.h">
+      <Filter>classes\network</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
