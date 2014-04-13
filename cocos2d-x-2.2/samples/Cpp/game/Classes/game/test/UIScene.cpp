@@ -41,6 +41,6 @@ void UIScene::loadExtraData(void* data)
 }
 void UIScene::menuCloseCallback(CCObject* obj)
 {
-	//SceneManager::getInstance()->popUIScene(this);
-	SceneManager::getInstance()->runUIScene("UIScene");
+	//MgrScene::getInstance()->popUIScene(this);
+	MgrScene::getInstance()->runUIScene("UIScene");
 }

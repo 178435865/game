@@ -9,5 +9,6 @@ class StringHelper
 public:
 	static bool isEmpty(const string& str);
 	static bool isEqual(const string& str1,const string& str2);
+	static vector<string> split(const string& str,const string& delims);
 };
 #endif

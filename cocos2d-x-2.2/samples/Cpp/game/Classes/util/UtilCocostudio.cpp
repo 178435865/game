@@ -26,7 +26,7 @@ UtilCocostudio* UtilCocostudio::getInstance()
 
 UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isCached)
 {
-	return CCUIHELPER->createWidgetFromJsonFile(fileName);
+	return GUIReader::shareReader()->widgetFromJsonFile(fileName);
 }
  void UtilCocostudio::setLabelText(const char* name,const char* text,UIWidget* ui)
 {
@@ -39,13 +39,13 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
 		}
 	}
 	
-	{
+	/*{
 		UITextArea* component=dynamic_cast<UITextArea*>(ui->getChildByName(name));
 		if(component)
 		{
 			component->setText(text);
 		}
-	}
+	}*/
 	
 
 }
@@ -59,11 +59,11 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
  }
  void UtilCocostudio::setLabelAreaText(const char* name,const char* text,UIWidget* ui)
  {
-	 UITextArea* component=dynamic_cast<UITextArea*>(ui->getChildByName(name));
+	/* UITextArea* component=dynamic_cast<UITextArea*>(ui->getChildByName(name));
 	 if(component)
 	 {
 		 component->setText(text);
-	 }
+	 }*/
  }
  void UtilCocostudio::setImageScale(const char* name,float scaleX,float scaleY,UIWidget* ui)
  {
@@ -92,7 +92,7 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
 	 UIImageView* component=dynamic_cast<UIImageView*>(ui->getChildByName(name));
 	 if(component)
 	 {
-		component->setTexture(path,UI_TEX_TYPE_PLIST);
+		component->loadTexture(path,UI_TEX_TYPE_PLIST);
 	 }
 	
  }
@@ -101,8 +101,8 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
 	 UIButton* component=dynamic_cast<UIButton*>(ui->getChildByName(name));
 	 if(component)
 	 {
-		 component->setNormalTexture(path,UI_TEX_TYPE_PLIST);
-		 component->setPressedTexture(path,UI_TEX_TYPE_PLIST);
+		 component->loadTextureNormal(path,UI_TEX_TYPE_PLIST);
+		 component->loadTexturePressed(path,UI_TEX_TYPE_PLIST);
 	 }
 
  }
@@ -114,32 +114,32 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
 		widget->setVisible(isShow);
 	}
  }
- bool UtilCocostudio::addEventRelease(cocos2d::CCObject* target,SEL_ReleaseEvent selector,const char* name,UIWidget* ui)
+ bool UtilCocostudio::addEventRelease(cocos2d::CCObject* target,SEL_TouchEvent selector,const char* name,UIWidget* ui)
  {
 	 UIWidget* widget=ui->getChildByName(name);
 	 if(widget)
 	 {
-		 widget->addReleaseEvent(target,selector);
+		 widget->addTouchEventListener(target,selector);
 		 return true;
 	 }
 	return false;
  }
- bool UtilCocostudio::addEventTouchBegin(cocos2d::CCObject* target,SEL_ReleaseEvent selector,const char* name,UIWidget* ui)
+ bool UtilCocostudio::addEventTouchBegin(cocos2d::CCObject* target,SEL_TouchEvent selector,const char* name,UIWidget* ui)
  {
 	 UIWidget* widget=ui->getChildByName(name);
 	 if(widget)
 	 {
-		 widget->addPushDownEvent(target,selector);
+		 widget->addTouchEventListener(target,selector);
 		 return true;
 	 }
 	 return false;
  }
- bool UtilCocostudio::addEventTouchMove(cocos2d::CCObject* target,SEL_ReleaseEvent selector,const char* name,UIWidget* ui)
+ bool UtilCocostudio::addEventTouchMove(cocos2d::CCObject* target,SEL_TouchEvent selector,const char* name,UIWidget* ui)
  {
 	 UIWidget* widget=ui->getChildByName(name);
 	 if(widget)
 	 {
-		 widget->addMoveEvent(target,selector);
+		 widget->addTouchEventListener(target,selector);
 		 return true;
 	 }
 	 return false;
@@ -162,7 +162,7 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
 		 UIButton* button=dynamic_cast<UIButton*>(obj);
 		 if(button)
 		 {
-			 button->setTouchEnable(enable);
+			 button->setTouchEnabled(enable);
 		 }
 		 UIWidget* widget=dynamic_cast<UIWidget*>(obj);
 		 if(widget)
@@ -190,15 +190,15 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
 	 UIWidget* component=dynamic_cast<UIWidget*>(ui->getChildByName(name));
 	 if(component)
 	 {
-		 component->setTouchEnable(enable);
-		 if(!enable)
+		 component->setTouchEnabled(enable);
+		/* if(!enable)
 		 {
 			 component->disable();
 		 }
 		 else
 		 {
 			component->active();
-		 }
+		 }*/
 		
 	 }
 	 else
@@ -210,15 +210,16 @@ UIWidget* UtilCocostudio::createWidgetFromJsonFile(const char *fileName,bool isC
  bool UtilCocostudio::isTouchEnable(const char* name,UIWidget* ui)
  {
 	 UIWidget* component=dynamic_cast<UIWidget*>(ui->getChildByName(name));
-	 if(component)
+	 return component->isTouchEnabled();
+	 /*if(component)
 	 {
-		 return component->isActive();
+	 return component->isActive();
 	 }
 	 else
 	 {
-		 throw;
+	 throw;
 	 }
-	 return false;
+	 return false;*/
  }
  void UtilCocostudio::setButtonDisable(const char* name,UIWidget* ui)
  {

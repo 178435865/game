@@ -41,7 +41,7 @@ void testScene1::loadExtraData(void* data)
 void testScene1::menuCloseCallback(CCObject* obj)
 {
 	CCLog("dsaddsa");
-	SceneManager::getInstance()->runWidthScene("testScene");
-	//SceneManager::getInstance()->runUIScene("UIScene");
-	//SceneManager::getInstance()->popScene();
+	MgrScene::getInstance()->runWidthScene("testScene");
+	//MgrScene::getInstance()->runUIScene("UIScene");
+	//MgrScene::getInstance()->popScene();
 }

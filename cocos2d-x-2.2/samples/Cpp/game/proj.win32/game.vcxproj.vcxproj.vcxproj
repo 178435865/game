@@ -68,7 +68,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\cocos2dx;$(ProjectDir)..\..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\..\cocos2dx\platform\third_party\win32\OGLES;..\Classes;$(ProjectDir)..\..\..\..\extensions;$(ProjectDir)..\..\..\..\cocos2dx\platform\third_party\win32\pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\cocos2dx;$(ProjectDir)..\..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\..\cocos2dx\platform\third_party\win32\OGLES;..\Classes;$(ProjectDir)..\..\..\..\extensions;$(ProjectDir)..\..\..\..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\..\..\..\jsoncpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -81,7 +81,7 @@
       <StringPooling>true</StringPooling>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>opengl32.lib;glew32.lib;libcocos2d.lib;libExtensions.lib;pthreadVCE2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;libcocos2d.lib;libExtensions.lib;pthreadVCE2.lib;libJsonCpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,20 +133,56 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\extensions\proj.win32\libExtensions.vcxproj">
       <Project>{21b2c324-891f-48ea-ad1a-5ae13de12e28}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\external\Box2D\proj.win32\Box2D.vcxproj">
+      <Project>{929480e7-23c0-4df6-8456-096d71547116}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\external\chipmunk\proj.win32\chipmunk.vcxproj">
+      <Project>{207bc7a9-ccf1-4f2f-a04d-45f72242ae25}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\jsoncpp\proj.win32\libJsonCpp\libJsonCpp.vcxproj">
+      <Project>{a305905e-9555-411a-89d9-c9a0ac53dd24}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\framework\GameScene.cpp" />
-    <ClCompile Include="..\Classes\framework\SceneManager.cpp" />
+    <ClCompile Include="..\Classes\framework\manager\MgrConfig.cpp" />
+    <ClCompile Include="..\Classes\framework\manager\MgrScene.cpp" />
+    <ClCompile Include="..\Classes\game\action\GameArmature.cpp" />
     <ClCompile Include="..\Classes\game\application\ApplicationCommand.cpp" />
-    <ClCompile Include="..\Classes\game\login\LoginCommand.cpp" />
-    <ClCompile Include="..\Classes\game\login\LoginFacade.cpp" />
-    <ClCompile Include="..\Classes\game\login\LoginMediator.cpp" />
-    <ClCompile Include="..\Classes\game\login\LoginProxy.cpp" />
+    <ClCompile Include="..\Classes\game\config\ConfigGraph.cpp" />
+    <ClCompile Include="..\Classes\game\data\DataGraph.cpp" />
+    <ClCompile Include="..\Classes\game\gamewidget\Rocker.cpp" />
+    <ClCompile Include="..\Classes\game\obj\Creature.cpp" />
+    <ClCompile Include="..\Classes\game\obj\Graph.cpp" />
+    <ClCompile Include="..\Classes\game\obj\IObjectState.cpp" />
+    <ClCompile Include="..\Classes\game\obj\Monster.cpp" />
+    <ClCompile Include="..\Classes\game\obj\Obj.cpp" />
+    <ClCompile Include="..\Classes\game\obj\Role.cpp" />
+    <ClCompile Include="..\Classes\game\scene\battle\BattleCommand.cpp" />
+    <ClCompile Include="..\Classes\game\scene\battle\BattleFacade.cpp" />
+    <ClCompile Include="..\Classes\game\scene\login\LoginCommand.cpp" />
+    <ClCompile Include="..\Classes\game\scene\login\LoginFacade.cpp" />
+    <ClCompile Include="..\Classes\game\scene\login\LoginMediator.cpp" />
+    <ClCompile Include="..\Classes\game\scene\login\LoginProxy.cpp" />
     <ClCompile Include="..\Classes\game\test\testScene.cpp" />
     <ClCompile Include="..\Classes\game\test\testScene1.cpp" />
     <ClCompile Include="..\Classes\game\test\UIScene.cpp" />
+    <ClCompile Include="..\Classes\game\ui\equipment\Equipment.cpp" />
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentCommand.cpp" />
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentFacade.cpp" />
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentMediator.cpp" />
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentProxy.cpp" />
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoDetailFacade.cpp" />
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoDetailMediator.cpp" />
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoFacade.cpp" />
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoMediator.cpp" />
     <ClCompile Include="..\Classes\lock\Lock.cpp" />
     <ClCompile Include="..\Classes\mvc\core\Controller.cpp" />
     <ClCompile Include="..\Classes\mvc\core\Model.cpp" />
@@ -161,6 +197,7 @@
     <ClCompile Include="..\Classes\network\Thread.cpp" />
     <ClCompile Include="..\Classes\util\StringHelper.cpp" />
     <ClCompile Include="..\Classes\util\UtilCocostudio.cpp" />
+    <ClCompile Include="..\Classes\util\UtilJson.cpp" />
     <ClCompile Include="..\Classes\util\UtilView.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -169,17 +206,42 @@
     <ClInclude Include="..\Classes\AppMacros.h" />
     <ClInclude Include="..\Classes\framework\BaseMacros.h" />
     <ClInclude Include="..\Classes\framework\GameScene.h" />
-    <ClInclude Include="..\Classes\framework\SceneManager.h" />
+    <ClInclude Include="..\Classes\framework\interface\IConfig.h" />
+    <ClInclude Include="..\Classes\framework\manager\MgrConfig.h" />
+    <ClInclude Include="..\Classes\framework\manager\MgrScene.h" />
     <ClInclude Include="..\Classes\gameStd.h" />
+    <ClInclude Include="..\Classes\game\action\GameArmature.h" />
     <ClInclude Include="..\Classes\game\application\ApplicationCommand.h" />
-    <ClInclude Include="..\Classes\game\login\LoginCommand.h" />
-    <ClInclude Include="..\Classes\game\login\LoginFacade.h" />
-    <ClInclude Include="..\Classes\game\login\LoginMediator.h" />
-    <ClInclude Include="..\Classes\game\login\LoginProxy.h" />
-    <ClInclude Include="..\Classes\game\login\LoginVO.h" />
+    <ClInclude Include="..\Classes\game\config\ConfigGraph.h" />
+    <ClInclude Include="..\Classes\game\data\DataGraph.h" />
+    <ClInclude Include="..\Classes\game\data\IData.h" />
+    <ClInclude Include="..\Classes\game\gamewidget\Rocker.h" />
+    <ClInclude Include="..\Classes\game\obj\Creature.h" />
+    <ClInclude Include="..\Classes\game\obj\Graph.h" />
+    <ClInclude Include="..\Classes\game\obj\IObjectState.h" />
+    <ClInclude Include="..\Classes\game\obj\Monster.h" />
+    <ClInclude Include="..\Classes\game\obj\Obj.h" />
+    <ClInclude Include="..\Classes\game\obj\Role.h" />
+    <ClInclude Include="..\Classes\game\scene\battle\BattleCommand.h" />
+    <ClInclude Include="..\Classes\game\scene\battle\BattleFacade.h" />
+    <ClInclude Include="..\Classes\game\scene\login\LoginCommand.h" />
+    <ClInclude Include="..\Classes\game\scene\login\LoginFacade.h" />
+    <ClInclude Include="..\Classes\game\scene\login\LoginMediator.h" />
+    <ClInclude Include="..\Classes\game\scene\login\LoginProxy.h" />
+    <ClInclude Include="..\Classes\game\scene\login\LoginVO.h" />
     <ClInclude Include="..\Classes\game\test\testScene.h" />
     <ClInclude Include="..\Classes\game\test\testScene1.h" />
     <ClInclude Include="..\Classes\game\test\UIScene.h" />
+    <ClInclude Include="..\Classes\game\ui\equipment\Equipment.h" />
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentCommand.h" />
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentFacade.h" />
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentMediator.h" />
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentProxy.h" />
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentVO.h" />
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoDetailFacade.h" />
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoDetailMediator.h" />
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoFacade.h" />
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoMediator.h" />
     <ClInclude Include="..\Classes\lock\ILock.h" />
     <ClInclude Include="..\Classes\lock\Lock.h" />
     <ClInclude Include="..\Classes\mvc\core\Controller.h" />
@@ -208,6 +270,7 @@
     <ClInclude Include="..\Classes\util\StringHelper.h" />
     <ClInclude Include="..\Classes\util\Util.h" />
     <ClInclude Include="..\Classes\util\UtilCocostudio.h" />
+    <ClInclude Include="..\Classes\util\UtilJson.h" />
     <ClInclude Include="..\Classes\util\UtilView.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

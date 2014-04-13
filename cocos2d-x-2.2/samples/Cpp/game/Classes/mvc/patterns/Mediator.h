@@ -5,18 +5,20 @@
 using namespace std;
 #include "mvc/interface/IMediator.h"
 #include "mvc/patterns/Notifier.h"
-
+#include "cocos2d.h"
+#include "cocos-ext.h"
+#include "util/Util.h"
+using namespace ui;
 
 class Notification;
 
 class Mediator:public IMediator,public Notifier
 {
 	public:
-		bool init();
+		virtual bool init();
 		Mediator(const string& name);
 		virtual ~Mediator();
 		const string& getName();
-		virtual void handleNotification(Notification& noti);
 		const vector<string>& getInterests();
 	protected:
 		string m_strName;

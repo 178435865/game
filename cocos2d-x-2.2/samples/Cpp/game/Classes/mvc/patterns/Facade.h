@@ -3,6 +3,7 @@
 
 #include "mvc/interface/IFacade.h"
 #include "mvc/interface/INotifier.h"
+#include "mvc/patterns/Notification.h"
 
 class Notification;
 class IView;

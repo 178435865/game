@@ -19,9 +19,6 @@
     <Filter Include="classes\game">
       <UniqueIdentifier>{4ac9791d-8d9a-4578-8ec8-9797009321f4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="classes\game\login">
-      <UniqueIdentifier>{b2339d2b-b8e0-4a19-b81a-320cf01064d3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="classes\util">
       <UniqueIdentifier>{48f8494a-f652-4dec-9e59-128241fcfac3}</UniqueIdentifier>
     </Filter>
@@ -39,6 +36,45 @@
     </Filter>
     <Filter Include="classes\lock">
       <UniqueIdentifier>{3dcefe99-61f3-408d-842b-d883861b4d78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\obj">
+      <UniqueIdentifier>{c118b5dc-b8ef-4862-850e-d77689367539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\action">
+      <UniqueIdentifier>{b6f13be8-28a4-4269-8af4-7ddbd68b9777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\data">
+      <UniqueIdentifier>{3aec3f57-1dae-4cb4-ae4c-19cb2d53147c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\config">
+      <UniqueIdentifier>{31be2886-c2f4-4f70-956d-2f1d5a8dfa5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\framework\manager">
+      <UniqueIdentifier>{c5eedbca-c496-4640-be73-b4753ab02180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\framework\interface">
+      <UniqueIdentifier>{6109a042-b8a7-464c-82b3-0d89fad1e54f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\ui">
+      <UniqueIdentifier>{7cdf86cc-bfaa-4dac-9240-31bf75c6f13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\ui\equipment">
+      <UniqueIdentifier>{1ae0a3f0-5ad9-44dd-989f-5180f9b6e2b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\ui\missinfo">
+      <UniqueIdentifier>{13bf7264-53ca-44c7-8527-83088d08c9b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\gamewidget">
+      <UniqueIdentifier>{776e2664-39da-400d-a44c-40bc8719f17a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\scene">
+      <UniqueIdentifier>{6b7c410a-e15e-4613-bf58-c74e923d743c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\scene\login">
+      <UniqueIdentifier>{19b97a1e-b2f1-453b-a1b7-72eb70b5e052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\game\scene\battle">
+      <UniqueIdentifier>{6c9330a4-7f83-480f-b754-43c641a49d6d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -62,20 +98,8 @@
     <ClCompile Include="..\Classes\mvc\patterns\Notifier.cpp">
       <Filter>classes\mvc\patterns</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\game\login\LoginMediator.cpp">
-      <Filter>classes\game\login</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\game\login\LoginFacade.cpp">
-      <Filter>classes\game\login</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\game\login\LoginCommand.cpp">
-      <Filter>classes\game\login</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\util\StringHelper.cpp">
       <Filter>classes\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\game\login\LoginProxy.cpp">
-      <Filter>classes\game\login</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\util\UtilView.cpp">
       <Filter>classes\util</Filter>
@@ -85,9 +109,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\game\application\ApplicationCommand.cpp">
       <Filter>classes\game\application</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\framework\SceneManager.cpp">
-      <Filter>classes\framework</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\framework\GameScene.cpp">
       <Filter>classes\framework</Filter>
@@ -118,6 +139,90 @@
     </ClCompile>
     <ClCompile Include="..\Classes\network\Runnable.cpp">
       <Filter>classes\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\config\ConfigGraph.cpp">
+      <Filter>classes\game\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\framework\manager\MgrScene.cpp">
+      <Filter>classes\framework\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\framework\manager\MgrConfig.cpp">
+      <Filter>classes\framework\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\data\DataGraph.cpp">
+      <Filter>classes\game\data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\util\UtilJson.cpp">
+      <Filter>classes\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\action\GameArmature.cpp">
+      <Filter>classes\game\action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\obj\Creature.cpp">
+      <Filter>classes\game\obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\obj\Graph.cpp">
+      <Filter>classes\game\obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\obj\Monster.cpp">
+      <Filter>classes\game\obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\obj\Role.cpp">
+      <Filter>classes\game\obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\obj\IObjectState.cpp">
+      <Filter>classes\game\obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\obj\Obj.cpp">
+      <Filter>classes\game\obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\equipment\Equipment.cpp">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentCommand.cpp">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentFacade.cpp">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentMediator.cpp">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\equipment\EquipmentProxy.cpp">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoDetailFacade.cpp">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoDetailMediator.cpp">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoFacade.cpp">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\ui\missinfo\MissInfoMediator.cpp">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\gamewidget\Rocker.cpp">
+      <Filter>classes\game\gamewidget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\scene\login\LoginCommand.cpp">
+      <Filter>classes\game\scene\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\scene\login\LoginFacade.cpp">
+      <Filter>classes\game\scene\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\scene\login\LoginMediator.cpp">
+      <Filter>classes\game\scene\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\scene\login\LoginProxy.cpp">
+      <Filter>classes\game\scene\login</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\scene\battle\BattleFacade.cpp">
+      <Filter>classes\game\scene\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\game\scene\battle\BattleCommand.cpp">
+      <Filter>classes\game\scene\battle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -172,26 +277,11 @@
     <ClInclude Include="..\Classes\mvc\patterns\SingleCommand.h">
       <Filter>classes\mvc\patterns</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\game\login\LoginMediator.h">
-      <Filter>classes\game\login</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\game\login\LoginProxy.h">
-      <Filter>classes\game\login</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\game\login\LoginCommand.h">
-      <Filter>classes\game\login</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\game\login\LoginFacade.h">
-      <Filter>classes\game\login</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\util\StringHelper.h">
       <Filter>classes\util</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\util\Util.h">
       <Filter>classes\util</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\game\login\LoginVO.h">
-      <Filter>classes\game\login</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\mvc\patterns\Proxy.h">
       <Filter>classes\mvc\patterns</Filter>
@@ -207,9 +297,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\game\application\ApplicationCommand.h">
       <Filter>classes\game\application</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\framework\SceneManager.h">
-      <Filter>classes\framework</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\framework\GameScene.h">
       <Filter>classes\framework</Filter>
@@ -249,6 +336,102 @@
     </ClInclude>
     <ClInclude Include="..\Classes\network\MessageQueue.h">
       <Filter>classes\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\config\ConfigGraph.h">
+      <Filter>classes\game\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\manager\MgrScene.h">
+      <Filter>classes\framework\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\manager\MgrConfig.h">
+      <Filter>classes\framework\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\data\DataGraph.h">
+      <Filter>classes\game\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\data\IData.h">
+      <Filter>classes\game\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\interface\IConfig.h">
+      <Filter>classes\framework\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\util\UtilJson.h">
+      <Filter>classes\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\action\GameArmature.h">
+      <Filter>classes\game\action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\obj\Creature.h">
+      <Filter>classes\game\obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\obj\Graph.h">
+      <Filter>classes\game\obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\obj\Monster.h">
+      <Filter>classes\game\obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\obj\Obj.h">
+      <Filter>classes\game\obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\obj\Role.h">
+      <Filter>classes\game\obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\obj\IObjectState.h">
+      <Filter>classes\game\obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\equipment\Equipment.h">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentCommand.h">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentFacade.h">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentMediator.h">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentProxy.h">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\equipment\EquipmentVO.h">
+      <Filter>classes\game\ui\equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoDetailFacade.h">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoDetailMediator.h">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoFacade.h">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\ui\missinfo\MissInfoMediator.h">
+      <Filter>classes\game\ui\missinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\gamewidget\Rocker.h">
+      <Filter>classes\game\gamewidget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\scene\login\LoginCommand.h">
+      <Filter>classes\game\scene\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\scene\login\LoginFacade.h">
+      <Filter>classes\game\scene\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\scene\login\LoginMediator.h">
+      <Filter>classes\game\scene\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\scene\login\LoginProxy.h">
+      <Filter>classes\game\scene\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\scene\login\LoginVO.h">
+      <Filter>classes\game\scene\login</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\scene\battle\BattleCommand.h">
+      <Filter>classes\game\scene\battle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\game\scene\battle\BattleFacade.h">
+      <Filter>classes\game\scene\battle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

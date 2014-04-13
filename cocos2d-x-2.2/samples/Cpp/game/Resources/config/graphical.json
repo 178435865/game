@@ -1,0 +1,35 @@
+{
+	
+	"1":	{
+			"armaturePath":"armature/aas/aas.ExportJson",
+			"plistPath":"armature/aas/aas0.plist",
+			"name":"aas",
+			"speed":1,
+			"scale":1,
+			"resId":1,
+			"defaultIndex":1
+
+		},
+	"2":	{
+			"armaturePath":"armature/guai/guai.ExportJson",
+			"plistPath":"armature/guai/guai0.plist",
+			"name":"guai",
+			"speed":1,
+			"scale":1,
+			"resId":1,
+			"defaultIndex":1
+
+		}
+	,"3":	{
+			"armaturePath":"armature/Cowboy/Cowboy.ExportJson",
+			"plistPath":"armature/Cowboy/Cowboy0.plist",
+			"name":"Cowboy",
+			"speed":1,
+			"scale":0.3,
+			"resId":1,
+			"defaultIndex":1,
+			"atkRect" : "0,0,0,0",
+			"beAtkRect" : "-200,-350,300,500"
+
+		}
+}

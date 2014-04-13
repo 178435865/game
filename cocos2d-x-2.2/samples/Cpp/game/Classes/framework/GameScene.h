@@ -2,7 +2,8 @@
 #define _GAME_SCENE_
 #include "cocos2d.h"
 #include "framework/BaseMacros.h"
-#include "framework/SceneManager.h"
+#include "framework/manager/MgrScene.h"
+#include "mvc/patterns/Mediator.h"
 USING_NS_CC;
 using namespace std;
 

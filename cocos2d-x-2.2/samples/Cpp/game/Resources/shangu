@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>shangu1</key>
+	<string>shangu1</string>
+	<key>shangu2</key>
+	<string>shangu2</string>
+	<key>shangu3</key>
+	<string>shangu3</string>
+</dict>
+</plist>

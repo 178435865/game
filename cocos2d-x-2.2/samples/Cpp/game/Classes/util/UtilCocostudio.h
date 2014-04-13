@@ -5,7 +5,7 @@
 #include "cocos-ext.h"
 USING_NS_CC_EXT;
 USING_NS_CC;
-
+using namespace ui;
 
 class UtilCocostudio
 {
@@ -24,10 +24,10 @@ public :
 	static void setLabelAreaText(const char* name,const char* text,UIWidget* ui);
 	static void setImageScale(const char* name,float scaleX,float scaleY,UIWidget* ui);
 	static void setImageScale(const char* name,int width,int height,UIWidget* ui);
-	static bool addEventRelease(cocos2d::CCObject* target,SEL_ReleaseEvent selector,const char* name,UIWidget* ui);
-	static bool addEventTouchBegin(cocos2d::CCObject* target,SEL_ReleaseEvent selector,const char* name,UIWidget* ui);
+	static bool addEventRelease(cocos2d::CCObject* target,SEL_TouchEvent selector,const char* name,UIWidget* ui);
+	static bool addEventTouchBegin(cocos2d::CCObject* target,SEL_TouchEvent selector,const char* name,UIWidget* ui);
 	static void setComponentXY(float x,float y,const char* name,UIWidget* ui);
-	static bool addEventTouchMove(cocos2d::CCObject* target,SEL_ReleaseEvent selector,const char* name,UIWidget* ui);
+	static bool addEventTouchMove(cocos2d::CCObject* target,SEL_TouchEvent selector,const char* name,UIWidget* ui);
 	static void setUIComponentColor(const char* name,int r,int g,int b,UIWidget* ui);
 	static void setAllButtonTouchEnable(bool enable,UIWidget* ui);
 	static void setTouchEnable(bool enable,const char* name,UIWidget* ui);

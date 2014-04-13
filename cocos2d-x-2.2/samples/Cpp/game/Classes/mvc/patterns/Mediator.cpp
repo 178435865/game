@@ -1,6 +1,7 @@
 #include "mvc/patterns/Mediator.h"
 #include "mvc/patterns/Facade.h"
 
+
 Mediator::Mediator(const string& name){
 	m_strName=name;
 };
@@ -16,7 +17,6 @@ bool Mediator::init()
 	Facade::getInstance()->registerMediator(this);
 	return true;
 }
-void Mediator::handleNotification(Notification& noti){};
 const vector<string>& Mediator::getInterests()
 {
 	return m_vInterests;

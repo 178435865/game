@@ -3,14 +3,20 @@
 #include <string>
 
 #include "AppMacros.h"
-#include "game/login/LoginFacade.h"
+#include "game/scene/login/LoginFacade.h"
+#include "game/ui/equipment/EquipmentFacade.h"
+#include "game/ui/missinfo/MissInfoFacade.h"
+#include "game/ui/missinfo/MissInfoDetailFacade.h"
 #include "mvc/patterns/Mediator.h"
-#include "framework/SceneManager.h"
+#include "framework/manager/MgrScene.h"
 #include "game/test/testScene.h"
 #include "game/test/UIScene.h"
 #include "framework/GameScene.h"
 #include "game/test/testScene1.h"
-#include "game/login/LoginMediator.h"
+#include "game/scene/login/LoginMediator.h"
+#include "game/ui/equipment/EquipmentMediator.h"
+#include "game/ui/missinfo/MissInfoMediator.h"
+#include "game/ui/missinfo/MissInfoDetailMediator.h"
 
 USING_NS_CC;
 using namespace std;
@@ -75,14 +81,19 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
-	LoginFacade::getInstance();
+	MissInfoFacade::getInstance();
+	MissInfoDetailFacade::getInstance();
+	EquipmentFacade::getInstance();
 
 	REGISTER_SCENE_FUN(testScene);
 	REGISTER_SCENE_FUN(testScene1);
-	REGISTER_SCENE_FUN(LoginMediator);
+	REGISTER_SCENE_FUN(MissInfoMediator);
+	REGISTER_SCENE_FUN(MissInfoDetailMediator);
+	REGISTER_SCENE_FUN(EquipmentMediator);
 	REGISTER_UI(UIScene);
 
-	SceneManager::getInstance()->runWidthScene("testScene");
+
+	MgrScene::getInstance()->runWidthScene("testScene");
 
 	/*CCScene *pScene = CCScene::create();
 	IMediator* med=LoginFacade::getInstance()->getMediator(LoginFacade::MEDIATOR_LOGIN);
