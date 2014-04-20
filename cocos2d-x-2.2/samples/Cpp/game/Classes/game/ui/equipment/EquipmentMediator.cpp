@@ -82,8 +82,8 @@ void EquipmentMediator::onLoadUI()
 	commToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("head_menu.json");
 	UILayer* commToolbarLayer=UILayer::create();
 	commToolbarLayer->addWidget(commToolbarUi);
-	float commToolbarX=UtilView::getViewDistanceX()+winSize.width/2-ui->getContentSize().width/2;
-	float commToolbarY=(winSize.height-ui->getContentSize().height)/2;
+	float commToolbarX=UtilView::getViewDistanceX()+winSize.width/2-commToolbarUi->getContentSize().width/2;
+	float commToolbarY=(winSize.height-commToolbarUi->getContentSize().height)/2;
 	commToolbarLayer->setPosition(ccp(commToolbarX,commToolbarY));
 	commToolbarLayer->setAnchorPoint(CCPointZero);
 	commToolbarLayer->setZOrder(1);
@@ -92,8 +92,8 @@ void EquipmentMediator::onLoadUI()
 	downmenuToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("downmenu.json");
 	UILayer* downmenuToolbarLayer=UILayer::create();
 	downmenuToolbarLayer->addWidget(downmenuToolbarUi);
-	float downmenuToolbarX=UtilView::getViewDistanceX()+winSize.width/2-ui->getContentSize().width/2;
-	float downmenuToolbarY=(winSize.height-ui->getContentSize().height)/2;
+	float downmenuToolbarX=UtilView::getViewDistanceX()+winSize.width/2-downmenuToolbarUi->getContentSize().width/2;
+	float downmenuToolbarY=(winSize.height-downmenuToolbarUi->getContentSize().height)/2;
 	downmenuToolbarLayer->setPosition(ccp(downmenuToolbarX,downmenuToolbarY));
 	downmenuToolbarLayer->setAnchorPoint(CCPointZero);
 	downmenuToolbarLayer->setZOrder(2);
