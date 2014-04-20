@@ -93,7 +93,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	REGISTER_SCENE_FUN(EquipmentMediator);
 	REGISTER_SCENE_FUN(LoginMediator);
 	REGISTER_UI(UIScene);
-	MgrScene::getInstance()->runWidthScene("testScene1");
+	MgrScene::getInstance()->runWidthScene("EquipmentMediator");
     return true;
 }
 

@@ -33,7 +33,8 @@ public :
 	static void setTouchEnable(bool enable,const char* name,UIWidget* ui);
 	static bool isTouchEnable(const char* name,UIWidget* ui);
 	static void setButtonNormal(const char* name,UIWidget* ui);
-	 static void setButtonDisable(const char* name,UIWidget* ui);
+	static void setButtonDisable(const char* name,UIWidget* ui);
+	static UIWidget* UtilCocostudio::getWidget(const char* name,UIWidget* ui);
 };
 
 #endif
