@@ -11,6 +11,9 @@ public :
 	void Active();
 	//解除摇杆
 	void UnActive();
+	CC_SYNTHESIZE(string,m_iBeginNotification,BeginNotification);
+	CC_SYNTHESIZE(string,m_iEndNotification,EndNotification);
+	CC_SYNTHESIZE(string,m_iMoveNotification,MoveNotification);
 private:
 	CCPoint m_pCenterPoint;//摇杆中心
 	CCPoint m_pCurrentPoint;//摇杆当前位置
@@ -26,5 +29,6 @@ private:
 	virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
 	virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
 	virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+	Rocker():m_iBeginNotification(""),m_iEndNotification(""),m_iMoveNotification(""){};
 };
 #endif

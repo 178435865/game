@@ -84,35 +84,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	MissInfoFacade::getInstance();
 	MissInfoDetailFacade::getInstance();
 	EquipmentFacade::getInstance();
+	LoginFacade::getInstance();
 
 	REGISTER_SCENE_FUN(testScene);
 	REGISTER_SCENE_FUN(testScene1);
 	REGISTER_SCENE_FUN(MissInfoMediator);
 	REGISTER_SCENE_FUN(MissInfoDetailMediator);
 	REGISTER_SCENE_FUN(EquipmentMediator);
+	REGISTER_SCENE_FUN(LoginMediator);
 	REGISTER_UI(UIScene);
-
-
-	MgrScene::getInstance()->runWidthScene("testScene");
-
-	/*CCScene *pScene = CCScene::create();
-	IMediator* med=LoginFacade::getInstance()->getMediator(LoginFacade::MEDIATOR_LOGIN);
-	if(med)
-	{
-		Mediator* mediator=dynamic_cast<Mediator*>(med);
-		if(mediator)
-		{
-			CCLayer* layer=dynamic_cast<CCLayer*>(mediator);
-			if(layer)
-			{
-				pScene->addChild(layer);
-			}
-		}
-		
-	}
-	
-	director->runWithScene(pScene);*/
-
+	MgrScene::getInstance()->runWidthScene("testScene1");
     return true;
 }
 

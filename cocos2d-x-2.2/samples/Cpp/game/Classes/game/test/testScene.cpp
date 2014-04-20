@@ -42,10 +42,29 @@ void testScene::onLoadUI()
 	m_pObj->chgState(StateStand::create());
 	addChild(m_pObj);
 
-	CCSprite *spRocker=CCSprite::create("joystick/joystick_left_fg.png");//Ò¡¸Ë
-	CCSprite *spRockerBG=CCSprite::create("joystick/joystick_left_bg.png");//Ò¡¸Ë±³¾°
-	Rocker *rocker=Rocker::createRockerWithCenter(ccp(120,120.0f),50.0f ,spRocker ,spRockerBG,false);//´´½¨Ò¡¸Ë
-	this->addChild(rocker);//Ò¡¸ËÌí¼Óµ½layerÖÐ
+	{
+		CCSprite *spRocker=CCSprite::create("joystick/joystick_left_fg.png");//Ò¡¸Ë
+		CCSprite *spRockerBG=CCSprite::create("joystick/joystick_left_bg.png");//Ò¡¸Ë±³¾°
+		Rocker *rocker=Rocker::createRockerWithCenter(ccp(120,120.0f),50.0f ,spRocker ,spRockerBG,false);//´´½¨Ò¡¸Ë
+		rocker->setBeginNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_BEGIN);
+		rocker->setMoveNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_MOVE);
+		rocker->setEndNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_END);
+		this->addChild(rocker);//Ò¡¸ËÌí¼Óµ½layerÖÐ
+
+	}
+	
+	{
+		CCSprite *spRocker=CCSprite::create("joystick/control_joystick.png");//Ò¡¸Ë
+		CCSprite *spRockerBG=CCSprite::create("joystick/control_baseboard.png");//Ò¡¸Ë±³¾°
+		Rocker *rocker=Rocker::createRockerWithCenter(ccp(size.width-120,120.0f),50.0f ,spRocker ,spRockerBG,false);//´´½¨Ò¡¸Ë
+		rocker->setBeginNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_RIGHT_BEGIN);
+		rocker->setMoveNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_RIGHT_MOVE);
+		rocker->setEndNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_RIGHT_END);
+		this->addChild(rocker);//Ò¡¸ËÌí¼Óµ½layerÖÐ
+
+	}
+
+
 	//this ÊÇ¸ölayer
 
 
@@ -66,28 +85,36 @@ void testScene::menuCloseCallback(CCObject* obj)
 {
 	CCLog("dsaddsa");
 	//MgrScene::getInstance()->runUIScene(LOAD_UI("UIScene"));
-	MgrScene::getInstance()->runWidthScene("EquipmentMediator");
+	MgrScene::getInstance()->runWidthScene("LoginMediator");
 }
 void testScene::initInterests()
 {
-	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_MOVE);
-	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_BEGIN);
-	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_END);
+	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_MOVE);
+	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_BEGIN);
+	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_END);
+
+	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_RIGHT_MOVE);
+	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_RIGHT_BEGIN);
+	m_vInterests.push_back(BattleFacade::NOTIFICATION_ROCKER_TOUCH_RIGHT_END);
 }
 void testScene::handleNotification(Notification& noti)
 {
 	const string str=noti.m_strNotiName;
 	CCLog("handleNotification %s ",str.c_str());
-	if(StringHelper::isEqual(str,BattleFacade::NOTIFICATION_ROCKER_TOUCH_MOVE))
+	if(StringHelper::isEqual(str,BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_MOVE))
 	{
 		
 		void* data=noti.m_pData;
 		CCPoint point=*((CCPoint*)data);
 		m_pObj->chgState(StateMoveBy::create(-point.x*1000,-point.y*1000,1000));
 	}
-	else if(StringHelper::isEqual(str,BattleFacade::NOTIFICATION_ROCKER_TOUCH_END))
+	else if(StringHelper::isEqual(str,BattleFacade::NOTIFICATION_ROCKER_TOUCH_LEFT_END))
 	{
 		m_pObj->chgState(StateStand::create());
-	}    
+	}
+	else if(StringHelper::isEqual(str,BattleFacade::NOTIFICATION_ROCKER_TOUCH_RIGHT_BEGIN))
+	{
+		m_pObj->chgState(StateAttack::create());
+	}
 
 };

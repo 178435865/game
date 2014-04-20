@@ -11,14 +11,13 @@ void Obj::chgState(IObjectState* state){
 	}
 
 	m_pNextState=state;
+	
 }
 
 void Obj::update(float dt)
 {
 	Graph::update(dt);
 	bool isSame=false;
-	//CC_SAFE_DELETE(m_pNextState);
-	//CC_SAFE_DELETE(m_pCurrentState);
 	if(m_pNextState)
 	{
 		if(m_pCurrentState)
@@ -54,6 +53,7 @@ void Obj::update(float dt)
 		}
 		else
 		{
+			CCLog("update merge");
 			m_pCurrentState->mergeState(m_pNextState);
 			delete m_pNextState;
 			m_pNextState=NULL;
@@ -77,7 +77,7 @@ void Obj::update(float dt)
 
 Obj::~Obj()
 {
-	stopAllActions();
+	this->resumeSchedulerAndActions();
 	CC_SAFE_DELETE(m_pCurrentState);
 	CC_SAFE_DELETE(m_pNextState);
 }

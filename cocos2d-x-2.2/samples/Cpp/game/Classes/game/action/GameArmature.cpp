@@ -70,7 +70,7 @@ void GameArmature::animationEvent(cocos2d::extension::CCArmature *armature, Move
 	}
 	else if(movementType==LOOP_COMPLETE)
 	{
-		m_bIsDone=true;
+		//m_bIsDone=true;
 		//m_pTarget->stopAction(this);
 	}
 }

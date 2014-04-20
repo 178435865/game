@@ -68,7 +68,7 @@ bool Rocker::ccTouchBegan(CCTouch* touch, CCEvent* event)
 		m_pJsSprite->setPosition(m_pCurrentPoint);
 		this->getChildByTag(88)->setPosition(m_pCurrentPoint);
 	}
-	Facade::getInstance()->sendNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_BEGIN);
+	Facade::getInstance()->sendNotification(getBeginNotification());
 	return true;
 }
 void  Rocker::ccTouchMoved(CCTouch* touch, CCEvent* event)
@@ -81,7 +81,7 @@ void  Rocker::ccTouchMoved(CCTouch* touch, CCEvent* event)
 	}else {
 		m_pCurrentPoint = touchPoint;
 	}
-	Facade::getInstance()->sendNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_MOVE,&getDirection());
+	Facade::getInstance()->sendNotification(getMoveNotification(),&getDirection());
 }
 void  Rocker::ccTouchEnded(CCTouch* touch, CCEvent* event)
 {
@@ -89,7 +89,7 @@ void  Rocker::ccTouchEnded(CCTouch* touch, CCEvent* event)
 	if(m_bIsFollowRole){
 		this->setVisible(false);
 	}
-	Facade::getInstance()->sendNotification(BattleFacade::NOTIFICATION_ROCKER_TOUCH_END);
+	Facade::getInstance()->sendNotification(getEndNotification());
 }
 Rocker* Rocker::initWithCenter(CCPoint aPoint ,float aRadius ,CCSprite* aJsSprite,CCSprite* aJsBg,bool _isFollowRole){
 

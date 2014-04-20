@@ -58,7 +58,7 @@ void EquipmentMediator::initButton()
 {
 	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65",ui);
 	//UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"login_Button",ui);
-	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65",downmenuToolbarUi);
+	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65_0_1_1",downmenuToolbarUi);
 
 }
 void EquipmentMediator::onLoadResource()
