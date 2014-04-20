@@ -66,7 +66,7 @@ void testScene::menuCloseCallback(CCObject* obj)
 {
 	CCLog("dsaddsa");
 	//MgrScene::getInstance()->runUIScene(LOAD_UI("UIScene"));
-	MgrScene::getInstance()->runWidthScene("LoginMediator");
+	MgrScene::getInstance()->runWidthScene("EquipmentMediator");
 }
 void testScene::initInterests()
 {
