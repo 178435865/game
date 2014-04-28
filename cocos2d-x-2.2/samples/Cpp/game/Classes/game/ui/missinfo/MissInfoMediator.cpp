@@ -123,7 +123,7 @@ void MissInfoMediator::onLoadUI()
         CCString *target = dynamic_cast<CCString*>(jt);
 		const char *chinese  = ((CCString*)strings->objectForKey(target->getCString()))->m_sString.c_str();
 
-			CCSprite* sprite=CCSprite::create("ui_button_select.png");
+			CCSprite* sprite=CCSprite::create("outmenu/Resources/ui_mission_purple.png");
 		addChild(sprite);
 		sprite->setPosition(ccp(baseX,baseY));
 
