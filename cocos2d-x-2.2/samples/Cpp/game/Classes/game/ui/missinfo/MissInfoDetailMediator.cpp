@@ -76,7 +76,7 @@ void MissInfoDetailMediator::onLoadResource()
 void MissInfoDetailMediator::onLoadUI()
 {
 
-	ui=UtilCocostudio::getInstance()->createWidgetFromJsonFile("mission_normal.json");
+	ui=UtilCocostudio::getInstance()->createWidgetFromJsonFile("outmenu/mission_normal.json");
 	UILayer* layer=UILayer::create();
 	layer->addWidget(ui);
 	CCSize winSize=CCDirector::sharedDirector()->getWinSize();
@@ -87,7 +87,7 @@ void MissInfoDetailMediator::onLoadUI()
 	layer->setZOrder(0);
 	this->addChild(layer);
 
-	UIWidget* commToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("head_menu.json");
+	UIWidget* commToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("outmenu/head_menu.json");
 	UILayer* commToolbarLayer=UILayer::create();
 	commToolbarLayer->addWidget(commToolbarUi);
 	float commToolbarX=UtilView::getViewDistanceX()+winSize.width/2-ui->getContentSize().width/2;
@@ -97,7 +97,7 @@ void MissInfoDetailMediator::onLoadUI()
 	commToolbarLayer->setZOrder(1);
 	this->addChild(commToolbarLayer);
 
-	downmenuToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("downmenu.json");
+	downmenuToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("outmenu/downmenu.json");
 	UILayer* downmenuToolbarLayer=UILayer::create();
 	downmenuToolbarLayer->addWidget(downmenuToolbarUi);
 	float downmenuToolbarX=UtilView::getViewDistanceX()+winSize.width/2-ui->getContentSize().width/2;

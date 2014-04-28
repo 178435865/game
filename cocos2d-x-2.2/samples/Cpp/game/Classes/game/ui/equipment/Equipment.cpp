@@ -69,7 +69,7 @@ void Equipment::onLoadResource()
 void Equipment::onLoadUI()
 {
 
-	ui=UtilCocostudio::getInstance()->createWidgetFromJsonFile("index.json");
+	ui=UtilCocostudio::getInstance()->createWidgetFromJsonFile("outmenu/index.json");
 	UILayer* layer=UILayer::create();
 	layer->addWidget(ui);
 	CCSize winSize=CCDirector::sharedDirector()->getWinSize();

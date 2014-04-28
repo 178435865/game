@@ -58,7 +58,7 @@ void EquipmentMediator::initButton()
 {
 	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65",ui);
 	//UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"login_Button",ui);
-	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65_0_1_1",downmenuToolbarUi);
+	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65",downmenuToolbarUi);
 
 }
 void EquipmentMediator::onLoadResource()
@@ -68,7 +68,7 @@ void EquipmentMediator::onLoadResource()
 void EquipmentMediator::onLoadUI()
 {
 
-	ui=UtilCocostudio::getInstance()->createWidgetFromJsonFile("index.json");
+	ui=UtilCocostudio::getInstance()->createWidgetFromJsonFile("outmenu/index.json");
 	UILayer* layer=UILayer::create();
 	layer->addWidget(ui);
 	CCSize winSize=CCDirector::sharedDirector()->getWinSize();
@@ -79,7 +79,7 @@ void EquipmentMediator::onLoadUI()
 	layer->setZOrder(0);
 	this->addChild(layer);
 
-	commToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("head_menu.json");
+	commToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("outmenu/head_menu.json");
 	UILayer* commToolbarLayer=UILayer::create();
 	commToolbarLayer->addWidget(commToolbarUi);
 	float commToolbarX=UtilView::getViewDistanceX()+winSize.width/2-commToolbarUi->getContentSize().width/2;
@@ -89,7 +89,7 @@ void EquipmentMediator::onLoadUI()
 	commToolbarLayer->setZOrder(1);
 	this->addChild(commToolbarLayer);
 
-	downmenuToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("downmenu.json");
+	downmenuToolbarUi=UtilCocostudio::getInstance()->createWidgetFromJsonFile("outmenu/downmenu.json");
 	UILayer* downmenuToolbarLayer=UILayer::create();
 	downmenuToolbarLayer->addWidget(downmenuToolbarUi);
 	float downmenuToolbarX=UtilView::getViewDistanceX()+winSize.width/2-downmenuToolbarUi->getContentSize().width/2;
