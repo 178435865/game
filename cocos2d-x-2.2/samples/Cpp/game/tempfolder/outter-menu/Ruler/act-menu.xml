@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfGuidesProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GuidesProject>
+    <Project>index</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>info_window_confirm</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>mission_normal</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>head_menu</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>downmenu</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>info_window_confirm_yn</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>mission_sp</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>arsenal</Project>
+    <GuidesList />
+  </GuidesProject>
+</ArrayOfGuidesProject>
