@@ -8,13 +8,15 @@
   <JsonFolder>D:\maradoc\ui\outter-menu\Json</JsonFolder>
   <JsonList>
     <string>index.json</string>
-    <string>info_window_confirm.json</string>
-    <string>mission_normal.json</string>
     <string>head_menu.json</string>
     <string>downmenu.json</string>
+    <string>info_window_confirm.json</string>
     <string>info_window_confirm_yn.json</string>
+    <string>mission_normal.json</string>
     <string>mission_sp.json</string>
     <string>arsenal.json</string>
+    <string>equipment_list.json</string>
+    <string>equipment_select.json</string>
   </JsonList>
   <CanvasSize>
     <Width>1024</Width>
@@ -25,5 +27,5 @@
   <ResRelativePath />
   <imageFileList />
   <JsonSuffix>.json</JsonSuffix>
-  <CurrentUIJson>arsenal.json</CurrentUIJson>
+  <CurrentUIJson />
 </UIProject>

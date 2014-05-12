@@ -32,4 +32,12 @@
     <Project>arsenal</Project>
     <GuidesList />
   </GuidesProject>
+  <GuidesProject>
+    <Project>equipment_list</Project>
+    <GuidesList />
+  </GuidesProject>
+  <GuidesProject>
+    <Project>equipment_select</Project>
+    <GuidesList />
+  </GuidesProject>
 </ArrayOfGuidesProject>
