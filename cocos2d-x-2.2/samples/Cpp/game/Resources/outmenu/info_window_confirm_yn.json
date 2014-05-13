@@ -60,7 +60,7 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "Resources/ui_infowin1.png",
+            "path": "ui_infowin1.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -92,7 +92,7 @@
           "ignoreSize": true,
           "layoutParameter": null,
           "opacity": 255,
-          "positionPercentX": 0.352539063,
+          "positionPercentX": 0.48828125,
           "positionPercentY": 0.3828125,
           "positionType": 0,
           "rotation": 0,
@@ -123,13 +123,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "Resources/ui_button_no.png",
+            "path": "ui_button_no.png",
             "plistFile": "",
             "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": "Resources/ui_button_no.png",
+            "path": "ui_button_no.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -196,13 +196,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "Resources/ui_button_yes.png",
+            "path": "ui_button_yes.png",
             "plistFile": "",
             "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": "Resources/ui_button_yes.png",
+            "path": "ui_button_yes.png",
             "plistFile": "",
             "resourceType": 0
           },
