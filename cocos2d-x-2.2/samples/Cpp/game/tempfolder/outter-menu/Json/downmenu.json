@@ -73,13 +73,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_main_button.png",
+                "path": "Resources/ui_main_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_main_button.png",
+                "path": "Resources/ui_main_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -146,13 +146,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_shop_button.png",
+                "path": "Resources/ui_shop_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_shop_button.png",
+                "path": "Resources/ui_shop_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -219,13 +219,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_favor_button.png",
+                "path": "Resources/ui_favor_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_favor_button.png",
+                "path": "Resources/ui_favor_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -292,13 +292,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_friend_button.png",
+                "path": "Resources/ui_friend_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_friend_button.png",
+                "path": "Resources/ui_friend_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -365,13 +365,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_equip_button.png",
+                "path": "Resources/ui_equip_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_equip_button.png",
+                "path": "Resources/ui_equip_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -438,13 +438,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_quest_button.png",
+                "path": "Resources/ui_quest_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_quest_button.png",
+                "path": "Resources/ui_quest_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -511,13 +511,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_arsenal_button.png",
+                "path": "Resources/ui_arsenal_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_arsenal_button.png",
+                "path": "Resources/ui_arsenal_button.png",
                 "plistFile": "",
                 "resourceType": 0
               },

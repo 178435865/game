@@ -60,7 +60,7 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "standing.png",
+            "path": "Resources/standing.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -114,7 +114,7 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "ui_newswin.png",
+            "path": "Resources/ui_newswin.png",
             "plistFile": "",
             "resourceType": 0
           },

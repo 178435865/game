@@ -73,13 +73,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_mission_blue.png",
+                "path": "Resources/ui_mission_blue.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_mission_blue.png",
+                "path": "Resources/ui_mission_blue.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -210,13 +210,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "ui_back_button.png",
+            "path": "Resources/ui_back_button.png",
             "plistFile": "",
             "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": "ui_back_button.png",
+            "path": "Resources/ui_back_button.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -283,13 +283,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "ui_spmode_button.png",
+            "path": "Resources/ui_spmode_button.png",
             "plistFile": "",
             "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": "ui_spmode_button.png",
+            "path": "Resources/ui_spmode_button.png",
             "plistFile": "",
             "resourceType": 0
           },

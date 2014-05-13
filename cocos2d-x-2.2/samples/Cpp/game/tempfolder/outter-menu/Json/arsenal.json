@@ -60,7 +60,7 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "ui_greatwin.png",
+            "path": "Resources/ui_greatwin.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -123,13 +123,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "ui_itemstorage_upgrade.png",
+            "path": "Resources/ui_itemstorage_upgrade.png",
             "plistFile": "",
             "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": "ui_itemstorage_upgrade_on.png",
+            "path": "Resources/ui_itemstorage_upgrade_on.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -196,13 +196,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "ui_itemstorage_evo.png",
+            "path": "Resources/ui_itemstorage_evo.png",
             "plistFile": "",
             "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": "ui_itemstorage_evo_on.png",
+            "path": "Resources/ui_itemstorage_evo_on.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -269,13 +269,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "ui_itemstorage_sell.png",
+            "path": "Resources/ui_itemstorage_sell.png",
             "plistFile": "",
             "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": "ui_itemstorage_sell_on.png",
+            "path": "Resources/ui_itemstorage_sell_on.png",
             "plistFile": "",
             "resourceType": 0
           },
@@ -346,13 +346,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_itemstorage_info.png",
+                "path": "Resources/ui_itemstorage_info.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_itemstorage_info.png",
+                "path": "Resources/ui_itemstorage_info.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -419,13 +419,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_itemstorage_no.png",
+                "path": "Resources/ui_itemstorage_no.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_itemstorage_no.png",
+                "path": "Resources/ui_itemstorage_no.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -492,13 +492,13 @@
               "fontType": 0,
               "normal": null,
               "normalData": {
-                "path": "ui_itemstorage_yes.png",
+                "path": "Resources/ui_itemstorage_yes.png",
                 "plistFile": "",
                 "resourceType": 0
               },
               "pressed": null,
               "pressedData": {
-                "path": "ui_itemstorage_yes.png",
+                "path": "Resources/ui_itemstorage_yes.png",
                 "plistFile": "",
                 "resourceType": 0
               },
@@ -873,7 +873,7 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "ui_arsenal_quickmenu.png",
+            "path": "Resources/ui_arsenal_quickmenu.png",
             "plistFile": "",
             "resourceType": 0
           },
