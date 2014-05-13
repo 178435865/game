@@ -9,7 +9,6 @@
 MissInfoFacade* MissInfoFacade::instance=NULL;
 
 // const string MissInfoFacade::COMMAND_LOGIN="LOGIN_FACADE_LOGIN";
-// const string MissInfoFacade::COMMAND_SWITCH_SEARCHPAGE="COMMAND_SWITCH_SEARCHPAGE";
  //const string MissInfoFacade::COMMAND_EXIT="LOGIN_FACADE_EXIT";
  //const string MissInfoFacade::PROXY_LOGIN="PROXY_LOGIN";
  const string MissInfoFacade::MEDIATOR_MISS_INFO="MEDIATOR_MISS_INFO";
@@ -33,8 +32,7 @@ void MissInfoFacade::initModel()
 void MissInfoFacade::initController()
 {
 	Facade::initController();
-	//registerCommand(COMMAND_SWITCH_SEARCHPAGE,MissInfoCommand::create());
-	//registerCommand(COMMAND_EXIT,MissInfoCommand::create());
+
 }
 MissInfoFacade* MissInfoFacade::getInstance()
 {

@@ -8,7 +8,6 @@ class MissInfoDetailFacade :public Facade
 		static MissInfoDetailFacade* getInstance();
 	public:
 		//static const string COMMAND_LOGIN;
-	//	static const string COMMAND_SWITCH_SEARCHPAGE;
 		//static const string COMMAND_EXIT;
 		//static const string PROXY_LOGIN;
 		static const string MEDIATOR_MISS_INFO_DETAIL;

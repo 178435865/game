@@ -33,6 +33,10 @@ void EquipmentMediator::handleNotification(Notification& noti)
 		//MgrScene::getInstance()->popScene(this);
 		MgrScene::getInstance()->runWidthScene("MissInfoMediator");
 	}
+	else if(StringHelper::isEqual(name,EquipmentFacade::NOTIFICATION_SWITCH_ARL_SUCCESS))
+	{
+		MgrScene::getInstance()->runWidthScene("ArsenalMediator");
+	}
 }
 void EquipmentMediator::callback(CCObject *obj, TouchEventType type)
 {
@@ -48,6 +52,10 @@ void EquipmentMediator::callback(CCObject *obj, TouchEventType type)
 			{
 				lm->sendCommand(EquipmentFacade::COMMAND_SWITCH_SEARCHPAGE,NULL);
 			}
+			else if(StringHelper::isEqual(name,"Button_65_0_1_Copy0"))
+			{
+				lm->sendCommand(EquipmentFacade::COMMAND_SWITCH_ARSENALPAGE,NULL);
+			}
 		}
 		
 	}
@@ -58,6 +66,7 @@ void EquipmentMediator::initButton()
 {
 	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65",ui);
 	//UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"login_Button",ui);
+	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65_0_1_Copy0",downmenuToolbarUi);
 	UtilCocostudio::getInstance()->addEventRelease(this,toucheventselector(EquipmentMediator::callback),"Button_65",downmenuToolbarUi);
 
 }
@@ -118,6 +127,7 @@ void EquipmentMediator::initInterests()
 {
 //	m_vInterests.push_back(EquipmentFacade::NOTIFICATION_LOGIN_SUCESS);
 	m_vInterests.push_back(EquipmentFacade::NOTIFICATION_SWITCH_SRH_SUCCESS);
+	m_vInterests.push_back(EquipmentFacade::NOTIFICATION_SWITCH_ARL_SUCCESS);
 //	m_vInterests.push_back(EquipmentFacade::NOTIFICATION_LOGIN_FAIL);
 //	m_vInterests.push_back(EquipmentFacade::NOTIFICATION_CLOSE);
 }

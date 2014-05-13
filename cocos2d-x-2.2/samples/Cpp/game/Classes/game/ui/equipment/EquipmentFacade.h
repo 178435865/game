@@ -9,12 +9,14 @@ class EquipmentFacade :public Facade
 	public:
 		//static const string COMMAND_LOGIN;
 		static const string COMMAND_SWITCH_SEARCHPAGE;
+		static const string COMMAND_SWITCH_ARSENALPAGE;
 		//static const string COMMAND_EXIT;
 		//static const string PROXY_LOGIN;
 		static const string MEDIATOR_EQUIPMENT;
 
 		//static const string NOTIFICATION_LOGIN_SUCESS;
 		static const string NOTIFICATION_SWITCH_SRH_SUCCESS;
+		static const string NOTIFICATION_SWITCH_ARL_SUCCESS;
 		//static const string NOTIFICATION_LOGIN_FAIL;
 		//static const string NOTIFICATION_CLOSE;
 

@@ -23,6 +23,10 @@ void EquipmentCommand::execute(Notification& noti)
 	{
 		sendNotification(EquipmentFacade::NOTIFICATION_SWITCH_SRH_SUCCESS);
 	}
+	else if(StringHelper::isEqual(name,EquipmentFacade::COMMAND_SWITCH_ARSENALPAGE))
+	{
+		sendNotification(EquipmentFacade::NOTIFICATION_SWITCH_ARL_SUCCESS);
+	}
 	/**
 	else if(StringHelper::isEqual(name,EquipmentFacade::COMMAND_LOGIN))
 	{

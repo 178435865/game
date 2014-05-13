@@ -42,23 +42,7 @@ void MissInfoDetailMediator::callback(CCObject *obj, TouchEventType type)
 	
 	//CCLog(((CCString*)pCloseItemn->getUserData())->m_sString.c_str());
 	MgrScene::getInstance()->runWidthScene("MissInfoMediator");
-	/**
-	UIButton* button=dynamic_cast<UIButton*>(obj);
-	if(button)
-	{
-		IMediator* mediator=getFacade()->getMediator(MissInfoDetailFacade::MEDIATOR_EQUIPMENT);
-		MissInfoDetailMediator* lm=dynamic_cast<MissInfoDetailMediator*>(mediator);
-		if(lm)
-		{
-			const string& name=button->getName();
-			if(StringHelper::isEqual(name,"Button_65"))
-			{
-				lm->sendCommand(MissInfoDetailFacade::COMMAND_SWITCH_SEARCHPAGE,NULL);
-			}
-		}
-		
-	}
-	*/
+	
 	
 }
 void MissInfoDetailMediator::initButton()

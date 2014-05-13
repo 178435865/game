@@ -10,12 +10,14 @@ EquipmentFacade* EquipmentFacade::instance=NULL;
 
 // const string EquipmentFacade::COMMAND_LOGIN="LOGIN_FACADE_LOGIN";
  const string EquipmentFacade::COMMAND_SWITCH_SEARCHPAGE="COMMAND_SWITCH_SEARCHPAGE";
+ const string EquipmentFacade::COMMAND_SWITCH_ARSENALPAGE="COMMAND_SWITCH_ARSENALPAGE";
  //const string EquipmentFacade::COMMAND_EXIT="LOGIN_FACADE_EXIT";
  //const string EquipmentFacade::PROXY_LOGIN="PROXY_LOGIN";
  const string EquipmentFacade::MEDIATOR_EQUIPMENT="MEDIATOR_EQUIPMENT";
 
 //const string EquipmentFacade::NOTIFICATION_LOGIN_SUCESS="NOTIFICATION_LOGIN_SUCESS";
 const string EquipmentFacade::NOTIFICATION_SWITCH_SRH_SUCCESS="NOTIFICATION_SWITCH_SRH_SUCCESS";
+const string EquipmentFacade::NOTIFICATION_SWITCH_ARL_SUCCESS="NOTIFICATION_SWITCH_ARL_SUCCESS";
 //const string EquipmentFacade::NOTIFICATION_LOGIN_FAIL="NOTIFICATION_LOGIN_FAIL";
 //const string EquipmentFacade::NOTIFICATION_CLOSE="NOTIFICATION_CLOSE";
 
@@ -34,6 +36,7 @@ void EquipmentFacade::initController()
 {
 	Facade::initController();
 	registerCommand(COMMAND_SWITCH_SEARCHPAGE,EquipmentCommand::create());
+	registerCommand(COMMAND_SWITCH_ARSENALPAGE,EquipmentCommand::create());
 	//registerCommand(COMMAND_EXIT,EquipmentCommand::create());
 }
 EquipmentFacade* EquipmentFacade::getInstance()
